@@ -30,7 +30,7 @@ class Board:
                 .  .  .
                 .  .  11
 
-        The order matter ! Other orders generates solution much slower.
+        The order matter ! Other orders generates solution much slowlly.
         """
         return (
             (i, j + 3),
@@ -47,10 +47,11 @@ class Board:
         """
         Returns a filtered generator of neighbors.
         """
-        return filter(
-            lambda neib: self.inside(*neib) and self.empty_cell(*neib),
-            self.possible_neighbors(i, j),
-        )
+        return filter(self.valid_move, self.possible_neighbors(i, j))
+
+    def valid_move(self, neib: tuple[int, int]) -> bool:
+        """True iff a move is valid."""
+        return self.inside(*neib) and self.empty_cell(*neib)
 
     def inside(self, i: int, j: int) -> bool:
         """True if those coords are inside the grid."""
@@ -94,8 +95,7 @@ def explore(board: Board, i: int, j: int, current: int = 2):
             board.solution = deepcopy(board.grid)
         return
 
-    moves = board.valid_moves(i, j)
-    for x, y in moves:
+    for x, y in board.valid_moves(i, j):
         if board.finished:
             return
 
