@@ -23,7 +23,7 @@ Fill a 10x10 board with 1 to 100 integers.
 
 3. Repeat last step untill you are strucked or have reached 100.
 
-A solution found :
+A solution found:
 
 ```
   1 43 70 16 42 65 11 41 64 10
@@ -41,6 +41,9 @@ A solution found :
 # N-Queens
 
 Dispose N queens on a NxN chess board without any pair attacking each other.
+
+A solution for 10 queens on a 10x10 board:
+
 
 ```
 
