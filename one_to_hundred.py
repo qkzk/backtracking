@@ -81,10 +81,8 @@ class Board:
 
     def format_board(self, grid: list[list[int]]) -> str:
         """Format a board. It's used to display the best solution found"""
-        s = []
-        for line in grid:
-            s.append("\n" + "".join(f"{val: 3d}" for val in line))
-        return "".join(s)
+        strings = ["\n" + "".join(f"{val: 3d}" for val in line) for line in grid]
+        return "".join(strings)
 
 
 def explore(board: Board, i: int, j: int, current: int = 2):
