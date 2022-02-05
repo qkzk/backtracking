@@ -30,7 +30,7 @@ class Board:
                 .  .  .
                 .  .  11
 
-        The order matter ! Other orders generates solution much slowlly.
+        The order matters if you want to find a solution quickly.
         """
         return (
             (i, j + 3),
