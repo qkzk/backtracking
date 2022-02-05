@@ -7,11 +7,10 @@ Some examples of backtracking algorithms implemented in Python
 
 Fill a 10x10 board with 1 to 100 integers.
 
-1. Start where you want
+1. Start by writing 1 where you want on the board.
 2. To write the next number, you must skip 2 cells in a straight line
-    or one cell diagonally.
+    or one cell diagonally (any direction).
 
-    Two cells are "neighbors" if
 
         * they are separated by 2 empty cells on a straight line :
             `10 . . 11`
@@ -22,7 +21,7 @@ Fill a 10x10 board with 1 to 100 integers.
             .  .  11
             ```
 
-3. Repeat last step untill you are strucked or reach 100.
+3. Repeat last step untill you are strucked or have reached 100.
 
 A solution found :
 
@@ -37,4 +36,23 @@ A solution found :
  58 84 26 47 85 27 48 86 28 49
  73 19 93 74 20 92 75 21 91 76
   4 46 59  5 37 60  6 38 61  7
+```
+
+# N-Queens
+
+Dispose N queens on a NxN chess board without any pair attacking each other.
+
+```
+
+       a b c d e f g h i j
+    10 ♛ . . . . . . . . .
+     9 . . ♛ . . . . . . .
+     8 . . . . . ♛ . . . .
+     7 . . . . . . . ♛ . .
+     6 . . . . . . . . . ♛
+     5 . . . . ♛ . . . . .
+     4 . . . . . . . . ♛ .
+     3 . ♛ . . . . . . . .
+     2 . . . ♛ . . . . . .
+     1 . . . . . . ♛ . . .
 ```
